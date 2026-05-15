@@ -1,0 +1,200 @@
+/* Header Styles */
+.top-bar {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1000;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header {
+   padding: 12px 20px;
+   background-color: #f5f5f5;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #e0e0e0;
+}
+
+header .contacts {
+   display: flex;
+   justify-content: flex-start;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+header .contacts a {
+   font-size: 0.85rem;
+   color: #1a3d4d;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+header .contacts a:hover {
+   color: #e74c3c;
+}
+
+header .socials {
+   display: flex;
+   justify-content: flex-end;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+
+header .socials a {
+   font-size: 0.85rem;
+   color: #1a3d4d;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+header .socials a:hover {
+   color: #e74c3c;
+}
+
+/* Navigation Bar */
+.nav-bar {
+   background: linear-gradient(135deg, #1a3d4d 0%, #2d5a6f 100%);
+   padding: 15px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 30px;
+}
+
+.nav-bar .logo {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   flex-shrink: 0;
+}
+
+.nav-bar .logo img {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+
+.nav-bar .logo p {
+   color: white;
+   font-weight: bold;
+   font-size: 1.1rem;
+   margin: 0;
+}
+
+.nav-bar .nav-links {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   flex: 1;
+   flex-wrap: wrap;
+}
+
+.nav-bar .nav-links a {
+   color: white;
+   font-weight: 500;
+   transition: color 0.3s ease, border-bottom 0.3s ease;
+   padding-bottom: 5px;
+   border-bottom: 2px solid transparent;
+}
+
+.nav-bar .nav-links a:hover,
+.nav-bar .nav-links a.active {
+   color: #e74c3c;
+   border-bottom: 2px solid #e74c3c;
+}
+
+.nav-bar .appoint {
+   flex-shrink: 0;
+}
+
+.nav-bar .appoint button {
+   padding: 10px 25px;
+   background-color: #e74c3c;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   font-weight: 600;
+   font-size: 0.9rem;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+   transition: all 0.3s ease;
+}
+
+.nav-bar .appoint button:hover {
+   background-color: #c0392b;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+   display: none;
+   background: none;
+   border: none;
+   color: white;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   header {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   header .contacts,
+   header .socials {
+      gap: 10px;
+      font-size: 0.75rem;
+   }
+
+   .nav-bar {
+      gap: 15px;
+      flex-wrap: wrap;
+   }
+
+   .nav-bar .nav-links {
+      display: none;
+      gap: 15px;
+      flex-basis: 100%;
+      flex-direction: column;
+   }
+
+   .nav-bar .nav-links.active {
+      display: flex;
+   }
+
+   .mobile-menu-toggle {
+      display: block;
+   }
+
+   .nav-bar .appoint {
+      flex-basis: 100%;
+      text-align: center;
+   }
+}
+
+@media (max-width: 480px) {
+   header {
+      padding: 8px 10px;
+   }
+
+   header .contacts a,
+   header .socials a {
+      font-size: 0.7rem;
+   }
+
+   .nav-bar {
+      padding: 10px;
+   }
+
+   .nav-bar .logo p {
+      font-size: 0.9rem;
+   }
+
+   .nav-bar .appoint button {
+      padding: 8px 20px;
+      font-size: 0.8rem;
+   }
+}
