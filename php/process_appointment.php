@@ -1,5 +1,8 @@
 <?php
-header('Content-Type: application/json');
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+error_reporting(E_ALL);
+header('Content-Type: application/json; charset=UTF-8');
 
 $response = ['success' => false, 'message' => 'Unable to process appointment request.'];
 
@@ -9,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/mail_helper.php';
 
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
@@ -65,6 +69,26 @@ $stmt->bind_param('ssssssssss', $name, $email, $phone, $location, $expertise, $m
 if ($stmt->execute()) {
     $response['success'] = true;
     $response['message'] = 'Appointment request submitted successfully.';
+
+    $emailSubject = 'New Appointment Request from ' . $name;
+    $emailBody = buildAdminNotificationBody('New Appointment Request', [
+        'Name' => $name,
+        'Email' => $email,
+        'Phone' => $phone,
+        'Location' => $location ?: 'N/A',
+        'Expertise' => $expertise,
+        'Meeting Type' => $meeting,
+        'Date' => $date,
+        'Time' => $time,
+        'Message' => $message,
+        'Document Uploaded' => $documentPath ? 'Yes (' . $documentPath . ')' : 'No',
+    ]);
+
+    $mailSent = sendAdminNotificationEmail($emailSubject, $emailBody, $email);
+    if (!$mailSent) {
+        error_log('Appointment: notification email failed for ' . $email . ' name: ' . $name);
+        $response['message'] = 'Appointment saved, but notification email could not be sent. We will contact you soon.';
+    }
 } else {
     $response['message'] = 'Unable to save appointment. Please try again later.';
 }

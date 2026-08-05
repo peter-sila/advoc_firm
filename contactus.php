@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="uploads/court.jpg" type="image/x-icon">
    <title>Contact Us - WE GOT YOU Advocates</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <link rel="stylesheet" href="css/global.css">
@@ -36,6 +37,8 @@
 
       <div class="contact-form">
          <h3>Send us a Message</h3>
+         <div id="contactSuccess" class="form-success">Your message has been sent successfully. We will get back to you shortly.</div>
+         <div id="contactError" class="form-error">An error occurred while sending your message. Please try again.</div>
          <form id="contactForm">
             <input type="text" placeholder="Your Name" name="name" required>
             <input type="email" placeholder="Email Address" name="email" required>

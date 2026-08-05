@@ -56,12 +56,14 @@ function handleAppointmentSubmit(e) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            showSuccess('Your appointment request has been submitted successfully!');
+            showSuccess(data.message || 'Your appointment request has been submitted successfully!');
             form.reset();
-            // Optionally redirect after a delay
-            setTimeout(() => {
-                window.location.href = 'index.php';
-            }, 2000);
+            // Optionally redirect after a delay if server asked
+            if (data.redirect ?? true) {
+                setTimeout(() => {
+                    window.location.href = 'index.php';
+                }, 2000);
+            }
         } else {
             showError(data.message || 'An error occurred. Please try again.');
         }

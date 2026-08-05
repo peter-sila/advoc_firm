@@ -69,17 +69,24 @@ header .socials a:hover {
    flex-shrink: 0;
 }
 
+.nav-bar .logo a {
+   color: white;
+   font-weight: 800;
+   font-size: 1.35rem;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   text-decoration: none;
+}
+
+.nav-bar .logo a span {
+   color: #e74c3c;
+}
+
 .nav-bar .logo img {
    width: 40px;
    height: 40px;
    border-radius: 50%;
-}
-
-.nav-bar .logo p {
-   color: white;
-   font-weight: bold;
-   font-size: 1.1rem;
-   margin: 0;
+   object-fit: cover;
 }
 
 .nav-bar .nav-links {

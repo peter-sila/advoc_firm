@@ -17,6 +17,7 @@ $related_result = $conn->query("SELECT id, title, image FROM blogs WHERE id != $
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="uploads/court.jpg" type="image/x-icon">
   <title><?php echo htmlspecialchars($blog['title']); ?> - WE GOT YOU Advocates</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/global.css">
@@ -86,36 +87,6 @@ $related_result = $conn->query("SELECT id, title, image FROM blogs WHERE id != $
 
 <?php include "stat/footer.html"; ?>
 <script src="js/viewblog.js"></script>
-</body>
-</html>
-
-  <div class="content">
-    <h1><?php echo htmlspecialchars($blog['title']); ?></h1>
-    <p><em>Published on: <?php echo htmlspecialchars($blog['created_at']); ?></em></p>
-    <p><?php echo nl2br(htmlspecialchars($blog['content'])); ?></p>
-
-    <?php while ($heading = $headings_result->fetch_assoc()): ?>
-      <div class="heading"><?php echo htmlspecialchars($heading['heading']); ?></div>
-    <?php endwhile; ?>
-
-    <?php while ($image = $images_result->fetch_assoc()): ?>
-      <div class="image-box">
-        <img src="<?php echo htmlspecialchars($image['image_url']); ?>" alt="">
-        <?php if ($image['caption']) echo "<p><em>" . htmlspecialchars($image['caption']) . "</em></p>"; ?>
-      </div>
-    <?php endwhile; ?>
-  </div>
-
-  <div class="sidebar">
-    <h3>Latest Legal Insights</h3>
-    <ul>
-      <li><a href="#">Labor & Employment</a></li>
-      <li><a href="#">Constitutional Law</a></li>
-      <li><a href="#">Data Protection</a></li>
-    </ul>
-  </div>
-
-</div>
 </body>
 </html>
 

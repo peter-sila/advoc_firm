@@ -70,6 +70,18 @@ function handleContactSubmit(e) {
 }
 
 function showSuccess(message) {
+    const inline = document.getElementById('contactSuccess');
+    if (inline) {
+        inline.textContent = message;
+        inline.style.display = 'block';
+        inline.style.animation = 'slideIn 0.3s ease';
+        setTimeout(() => {
+            inline.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => inline.style.display = 'none', 300);
+        }, 4000);
+        return;
+    }
+
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;
@@ -97,6 +109,18 @@ function showSuccess(message) {
 }
 
 function showError(message) {
+    const inline = document.getElementById('contactError');
+    if (inline) {
+        inline.textContent = message;
+        inline.style.display = 'block';
+        inline.style.animation = 'slideIn 0.3s ease';
+        setTimeout(() => {
+            inline.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => inline.style.display = 'none', 300);
+        }, 4000);
+        return;
+    }
+
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;

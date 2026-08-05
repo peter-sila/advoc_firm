@@ -3,11 +3,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="uploads/court.jpg" type="image/x-icon">
    <title>About Us - WE GOT YOU Advocates</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <link rel="stylesheet" href="css/global.css">
-   <link rel="stylesheet" href="css/homes.css">
-   <link rel="stylesheet" href="css/practiceareas.css">
+   <link rel="stylesheet" href="css/aboutus.css">
    <link rel="stylesheet" href="stat/css/footers.css">
    <link rel="stylesheet" href="stat/css/headers.css">
 </head>
@@ -57,7 +57,7 @@
    <!-- Our Mission & Vision -->
    <section class="why-us">
       <div class="what-we-do">
-         <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500" alt="About Us">
+         <img src="uploads/justice.jpg" alt="About Us">
          <h3>Our Mission</h3>
          <p>To provide exceptional legal services that protect our clients' rights, interests, and aspirations. We are committed to delivering justice through professional advocacy, ethical practice, and innovative legal solutions tailored to each client's unique needs.</p>
       </div>

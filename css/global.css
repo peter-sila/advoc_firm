@@ -24,12 +24,19 @@ html {
 
 body {
   margin: 0;
+  padding-top: 150px;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(180deg, #f8fafc 0%, #eef3f9 100%);
   color: var(--text);
   line-height: 1.7;
   animation: pageFade 0.8s ease;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 180px;
+  }
 }
 
 img,

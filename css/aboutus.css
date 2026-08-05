@@ -1,0 +1,204 @@
+/* About Us Page Styles */
+
+.intro {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 100px 24px 60px;
+   text-align: center;
+   color: #14212d;
+}
+
+.intro h2 {
+   font-size: clamp(2rem, 3vw, 3.2rem);
+   margin-bottom: 24px;
+   letter-spacing: 0.02em;
+}
+
+.intro p {
+   max-width: 760px;
+   margin: 0 auto;
+   color: #49515c;
+   font-size: 1rem;
+   line-height: 1.9;
+}
+
+.motive-cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 24px;
+   padding: 40px 24px 56px;
+   max-width: 1180px;
+   margin: 0 auto;
+}
+
+.motive-cards .card {
+   background: #ffffff;
+   border-radius: 24px;
+   padding: 32px 26px;
+   box-shadow: 0 18px 40px rgba(20, 33, 45, 0.08);
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
+   text-align: center;
+}
+
+.motive-cards .card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 26px 50px rgba(20, 33, 45, 0.12);
+}
+
+.motive-cards .card p:first-child {
+   font-size: 2.4rem;
+   color: #e74c3c;
+   margin-bottom: 16px;
+}
+
+.motive-cards .card h4 {
+   font-size: 1.15rem;
+   margin-bottom: 16px;
+   color: #14212d;
+}
+
+.motive-cards .card p:last-of-type {
+   color: #5f6b78;
+   line-height: 1.85;
+   font-size: 0.98rem;
+}
+
+.motive-cards .card hr {
+   width: 48px;
+   margin: 22px auto 0;
+   border: none;
+   border-top: 2px solid #e74c3c;
+}
+
+.why-us {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+   align-items: center;
+   max-width: 1180px;
+   margin: 0 auto;
+   padding: 60px 24px 72px;
+}
+
+.why-us .what-we-do,
+.why-us .more-infor {
+   background: #ffffff;
+   border-radius: 24px;
+   padding: 32px;
+   box-shadow: 0 18px 38px rgba(20, 33, 45, 0.08);
+}
+
+.why-us .what-we-do img {
+   width: 100%;
+   max-height: 460px;
+   object-fit: cover;
+   border-radius: 20px;
+   margin-bottom: 26px;
+}
+
+.why-us h3 {
+   font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+   color: #14212d;
+   margin-bottom: 20px;
+}
+
+.why-us p {
+   color: #525f6f;
+   line-height: 1.9;
+   margin-bottom: 22px;
+   font-size: 1rem;
+}
+
+.why-us strong {
+   color: #14212d;
+}
+
+.why-us button {
+   padding: 14px 34px;
+   border-radius: 999px;
+   border: none;
+   background: #e74c3c;
+   color: white;
+   font-size: 1rem;
+   font-weight: 700;
+   box-shadow: 0 14px 30px rgba(231, 76, 60, 0.18);
+   transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.why-us button:hover {
+   background: #bf2e26;
+   transform: translateY(-2px);
+}
+
+.market {
+   background: linear-gradient(135deg, #1a3d4d 0%, #2d6a7f 100%);
+   color: white;
+   text-align: center;
+   padding: 56px 24px;
+   border-radius: 28px;
+   max-width: 1040px;
+   margin: 0 auto 60px;
+}
+
+.market h3 {
+   font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+   margin-bottom: 22px;
+}
+
+.market hr {
+   width: 96px;
+   border: 0;
+   border-top: 2px solid rgba(255,255,255,0.6);
+   margin: 18px auto;
+}
+
+.market p {
+   font-size: 1rem;
+   color: rgba(255,255,255,0.95);
+   margin-bottom: 12px;
+}
+
+.market a {
+   color: #ffd7d0;
+   text-decoration: underline;
+}
+
+.market a:hover {
+   color: #ffffff;
+}
+
+@media (max-width: 980px) {
+   .why-us {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 720px) {
+   .intro {
+      padding-top: 80px;
+   }
+   .intro h2 {
+      font-size: 2.4rem;
+   }
+   .motive-cards {
+      padding: 32px 16px 48px;
+   }
+   .why-us {
+      padding: 40px 16px 48px;
+   }
+   .market {
+      padding: 42px 18px;
+   }
+}
+
+@media (max-width: 560px) {
+   .intro p,
+   .why-us p,
+   .motive-cards .card p:last-of-type,
+   .market p {
+      font-size: 0.96rem;
+   }
+   .motive-cards {
+      gap: 18px;
+   }
+}
