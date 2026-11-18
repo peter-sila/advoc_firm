@@ -1,0 +1,8 @@
+.git
+.gitignore
+.vscode
+php/.env
+vendor/phpmailer/phpmailer/test
+vendor/phpmailer/phpmailer/examples
+vendor/phpmailer/phpmailer/docs
+*.log

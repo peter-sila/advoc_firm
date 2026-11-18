@@ -1,0 +1,34 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: database
+      DB_USER: sa
+      DB_PASSWORD: Wise12.,
+      DB_NAME: advocate
+    volumes:
+      - ./uploads:/var/www/html/uploads
+    depends_on:
+      database:
+        condition: service_healthy
+
+  database:
+    image: mariadb:10.11
+    environment:
+      MARIADB_DATABASE: advocate
+      MARIADB_USER: sa
+      MARIADB_PASSWORD: Wise12.,
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - database_data:/var/lib/mysql
+      - ./advocate_database_setup.sql:/docker-entrypoint-initdb.d/advocate_database_setup.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  database_data:
