@@ -27,7 +27,7 @@ body {
   padding-top: 150px;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef3f9 100%);
+  background: linear-gradient(180deg, #212325 0%, #181d24 100%);
   color: var(--text);
   line-height: 1.7;
   animation: pageFade 0.8s ease;

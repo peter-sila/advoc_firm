@@ -109,6 +109,7 @@ header .socials a:hover {
 .nav-bar .nav-links a.active {
    color: #e74c3c;
    border-bottom: 2px solid #e74c3c;
+   text-decoration: none;
 }
 
 .nav-bar .appoint {

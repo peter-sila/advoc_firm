@@ -11,7 +11,7 @@ function is_admin_logged_in() {
 
 function require_admin() {
     if (!is_admin_logged_in()) {
-        header('Location: /admin_login.php');
+        header('Location: /login.php');
         exit;
     }
 }

@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="shortcut icon" href="uploads/court.jpg" type="image/x-icon">
   <title>Admin Login - WE GOT YOU Advocates</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/global.css">
+  <!-- <link rel="stylesheet" href="css/global.css"> -->
   <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>

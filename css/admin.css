@@ -206,20 +206,24 @@ table tbody td {
 }
 
 .auth-page {
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
+  top: 0;
   background: linear-gradient(180deg, #f7f8fb 0%, #eaf0f6 100%);
 }
 
 .auth-card {
   background: #ffffff;
   border-radius: 26px;
-  padding: 40px 36px;
+  padding: 20px 15px 45px 15px;
   box-shadow: 0 24px 60px rgba(15, 34, 56, 0.12);
-  width: min(520px, 100%);
+  width: fit-content;
+  max-width: 480px;
 }
 
 .auth-brand h1 {
@@ -239,7 +243,7 @@ table tbody td {
 }
 
 .auth-form input {
-  width: 100%;
+  width: 93%;
   border: 1px solid #d7dee6;
   border-radius: 14px;
   padding: 14px 16px;
