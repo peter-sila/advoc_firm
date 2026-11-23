@@ -146,27 +146,28 @@ header .socials a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-   header {
-      flex-direction: column;
-      gap: 10px;
-   }
-
-   header .contacts,
-   header .socials {
-      gap: 10px;
-      font-size: 0.75rem;
+   .top-bar > header {
+      display: none;
    }
 
    .nav-bar {
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
+   }
+
+   .nav-bar .logo {
+      margin-right: auto;
    }
 
    .nav-bar .nav-links {
       display: none;
-      gap: 15px;
+      order: 3;
       flex-basis: 100%;
       flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
    }
 
    .nav-bar .nav-links.active {
@@ -175,26 +176,36 @@ header .socials a:hover {
 
    .mobile-menu-toggle {
       display: block;
+      padding: 8px 10px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 1.4rem;
+   }
+
+   .nav-bar .nav-links a {
+      padding: 12px 8px;
+      border-bottom: 0;
    }
 
    .nav-bar .appoint {
+      display: none;
+      order: 4;
       flex-basis: 100%;
       text-align: center;
+   }
+
+   .nav-bar .nav-links.active + .appoint {
+      display: block;
    }
 }
 
 @media (max-width: 480px) {
-   header {
-      padding: 8px 10px;
-   }
-
-   header .contacts a,
-   header .socials a {
-      font-size: 0.7rem;
-   }
-
    .nav-bar {
-      padding: 10px;
+      padding: 12px 16px;
+   }
+
+   .nav-bar .logo a {
+      font-size: 1.1rem;
    }
 
    .nav-bar .logo p {

@@ -323,3 +323,37 @@ aside.sidebar,
       grid-template-columns: 1fr;
    }
 }
+
+@media (max-width: 768px) {
+   .container {
+      margin-top: 0;
+      padding: 24px 16px;
+   }
+
+   .main-content,
+   aside.sidebar,
+   .sidebar {
+      padding: 24px;
+   }
+
+   .header-image {
+      height: clamp(180px, 42vw, 280px);
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      padding: 16px 12px;
+      gap: 20px;
+   }
+
+   .main-content,
+   aside.sidebar,
+   .sidebar {
+      padding: 18px;
+   }
+
+   .meta {
+      font-size: 0.85rem;
+   }
+}

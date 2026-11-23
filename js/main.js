@@ -1,34 +1,12 @@
 // Main JavaScript for WE GOT YOU Advocates Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    setupMobileMenu();
-    
     // Smooth scrolling for navigation links
     setupSmoothScroll();
     
     // Active link highlighting
     highlightActiveLink();
 });
-
-// Mobile Menu Toggle
-function setupMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-bar .nav-links');
-    
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-}
 
 // Smooth Scrolling
 function setupSmoothScroll() {

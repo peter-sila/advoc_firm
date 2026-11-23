@@ -202,3 +202,38 @@
       gap: 18px;
    }
 }
+
+@media (max-width: 768px) {
+   .intro {
+      padding: 48px 18px 32px;
+   }
+
+   .why-us {
+      gap: 24px;
+   }
+
+   .why-us .what-we-do,
+   .why-us .more-infor {
+      padding: 24px;
+   }
+
+   .market {
+      width: calc(100% - 32px);
+      margin-bottom: 36px;
+   }
+}
+
+@media (max-width: 480px) {
+   .intro h2 {
+      font-size: 2rem;
+   }
+
+   .why-us .what-we-do,
+   .why-us .more-infor {
+      padding: 20px;
+   }
+
+   .why-us button {
+      width: 100%;
+   }
+}

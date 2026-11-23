@@ -118,3 +118,29 @@ footer hr {
    }
 }
 
+@media (max-width: 768px) {
+   footer {
+      margin-top: 36px;
+   }
+
+   .f_top {
+      grid-template-columns: minmax(0, 1fr);
+      overflow-wrap: anywhere;
+   }
+
+   .f_btm {
+      overflow-wrap: anywhere;
+   }
+}
+
+@media (max-width: 480px) {
+   footer {
+      padding: 28px 16px 18px;
+   }
+
+   .contact-infor a,
+   .q-links a {
+      font-size: 0.9rem;
+   }
+}
+

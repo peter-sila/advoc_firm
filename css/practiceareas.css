@@ -219,3 +219,26 @@ body {
       font-size: 0.95rem;
    }
 }
+
+@media (max-width: 768px) {
+   .intro,
+   .t-intro {
+      margin-top: 0;
+   }
+
+   .practice-areas .card {
+      height: auto;
+      min-height: 280px;
+   }
+}
+
+@media (max-width: 480px) {
+   .intro,
+   .t-intro {
+      padding-top: 36px;
+   }
+
+   .practice-areas .card img {
+      height: 180px;
+   }
+}

@@ -171,3 +171,19 @@ body {
       font-size: 1.3rem;
    }
 }
+
+@media (max-width: 768px) {
+   .latest-news {
+      margin-top: 0;
+   }
+}
+
+@media (max-width: 480px) {
+   .latest-news h2 {
+      margin-bottom: 30px;
+   }
+
+   .latest-news .n-card img {
+      height: 180px;
+   }
+}

@@ -370,6 +370,61 @@ table tbody tr {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 76px;
+  }
+
+  .container,
+  .admin-dashboard,
+  .form-wrapper,
+  .contact-container,
+  .practice-areas,
+  .latest-news,
+  .related-posts {
+    width: calc(100% - 32px);
+  }
+
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 68px;
+  }
+
+  .container,
+  .admin-dashboard,
+  .form-wrapper,
+  .contact-container,
+  .practice-areas,
+  .latest-news,
+  .related-posts {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    padding: 56px 16px;
+  }
+
+  .button,
+  button,
+  input[type='submit'],
+  input[type='button'] {
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+}
+
 .animate-fade,
 .fade-in,
 .fade-up,

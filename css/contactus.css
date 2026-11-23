@@ -232,3 +232,28 @@ body {
       height: 200px !important;
    }
 }
+
+@media (max-width: 768px) {
+   .intro {
+      margin-top: 0;
+   }
+}
+
+@media (max-width: 480px) {
+   .intro {
+      padding-top: 36px;
+   }
+
+   .contact-info,
+   .contact-form {
+      padding: 20px;
+   }
+
+   .contact-form button {
+      width: 100%;
+   }
+
+   .map iframe {
+      width: 100%;
+   }
+}
