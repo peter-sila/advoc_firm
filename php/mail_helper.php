@@ -5,14 +5,14 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Admin notification recipients and sender details.
-define('ADMIN_NOTIFICATION_EMAIL', 'petersila2022@gmail.com');
-define('ADMIN_NOTIFICATION_FROM', 'petersila2022@gmail.com');
+define('ADMIN_NOTIFICATION_EMAIL', '');
+define('ADMIN_NOTIFICATION_FROM', '');
 define('ADMIN_NOTIFICATION_NAME', 'WE GOT YOU Advocates');
 
 // SMTP settings: replace these with your custom SMTP provider credentials.
 define('SMTP_HOST', 'smtp.example.com');
-define('SMTP_USERNAME', 'wise.wiser254@gmail.com');
-define('SMTP_PASSWORD', 'acjk udhd nune mbpt');
+define('SMTP_USERNAME', '');
+define('SMTP_PASSWORD', '');
 define('SMTP_PORT', 587);
 define('SMTP_SECURE', 'tls');
 

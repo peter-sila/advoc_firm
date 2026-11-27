@@ -2,3 +2,4 @@ advocate_database_setup.sql
 php/db_config.php
 php/.env
 php/constants.php
+vendor
